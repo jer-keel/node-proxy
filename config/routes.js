@@ -1,4 +1,5 @@
 module.exports = {
-  'example.com': { target: 'http://myip:myport1' },
-  'example2.com': { target: 'http://myip:myport2' }
+  'ipaddress': 'http://myip:',
+  'example.com': { target: 'myport1' },
+  'example2.com': { target: 'myport2' }
 };

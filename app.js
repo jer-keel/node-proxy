@@ -13,7 +13,8 @@ var server = http.createServer(function(req, res) {
   var rqstUrl = req.headers.host;
   console.log(rqstUrl);
   if(routes[rqstUrl]) {
-    proxy.web(req, res, { target: routes[rqstUrl].target });
+    target_address = routes.ipaddress + routes[rqstUrl].target;
+    proxy.web(req, res, { target: target_address });
   }
 });
 
