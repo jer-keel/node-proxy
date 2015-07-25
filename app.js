@@ -17,8 +17,8 @@ var server = http.createServer(function(req, res) {
     proxy.web(req, res, { target: target_address });
   }
   else {
-    res.statusCode = 404;
-    res.statusMessage = '404: Not found';
+    res.writeHead(404, {"Content-Type": "text/plain"});
+    res.write("404: Not Found\n");
     res.end();
   }
 });
