@@ -1,0 +1,25 @@
+{
+  "name": "node-proxy",
+  "version": "0.0.1",
+  "description": "",
+  "license": "MIT",
+  "private": true,
+  "author": {
+    "name": "Jeremy Keeler",
+    "email": "jj.of.keeler@gmail.com",
+    "url": "http://jkeeler.net"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jer-keel/node-proxy.git"
+  },
+  "dependencies": {
+    "express": "^4.13.1",
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-load-plugins": "^1.0.0-rc.1",
+    "jshint-stylish": "^2.0.1"
+  }
+}
