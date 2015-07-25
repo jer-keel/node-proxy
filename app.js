@@ -16,6 +16,11 @@ var server = http.createServer(function(req, res) {
     target_address = routes.ipaddress + routes[rqstUrl].target;
     proxy.web(req, res, { target: target_address });
   }
+  else {
+    res.statusCode = 404;
+    res.statusMessage = '404: Not found';
+    res.end();
+  }
 });
 
 // Determine the port number
