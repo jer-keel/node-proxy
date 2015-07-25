@@ -14,7 +14,7 @@
     "url": "https://github.com/jer-keel/node-proxy.git"
   },
   "dependencies": {
-    "express": "^4.13.1",
+    "http-proxy": "^1.11.1"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
