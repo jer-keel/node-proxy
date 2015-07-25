@@ -8,8 +8,15 @@ Google, for example.
 ## Installation
 
 To install the proxy clone this repository, edit the routes.js file in the config
-folder to the machine's ip address and the required url to port mappings and then run the app.js file with
-node.
+folder to the machine's ip address and the required url to port mappings, and then run the app.js file with
+node. You can do this by typing these commands in order.
+```
+git clone https://github.com/jer-keel/node-proxy.git
+cd node-proxy
+npm install --production
+vim config/routes.js
+node app.js [optional port number]
+```
 
 ## Tips and Tricks
 
