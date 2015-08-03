@@ -22,6 +22,13 @@ var server = http.createServer(function(req, res) {
   }
 });
 
+// Check to see if an error has occurred
+proxy.on('error', function(err, req, res) {
+  res.writeHead(500, { 'Content-Type': 'text/plain' });
+  res.write('A server error occurred! Nothing is running at this address and port!');
+  res.end();
+});
+
 // Determine the port number
 var port = 3000;
 
