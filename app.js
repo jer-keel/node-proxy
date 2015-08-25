@@ -9,7 +9,7 @@ var proxy = httpProxy.createProxyServer({});
 
 // Set the ip header
 proxy.on('proxyReq', function(proxyReq, req, res, options) {
-  proxyReq.setHeader('X-Proxy-Header', req.connection.remoteAddress);
+  proxyReq.setHeader('X-Forwarded-Proxy', req.connection.remoteAddress);
 });
 
 // Setup the proxy server and determine routing
