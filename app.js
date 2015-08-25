@@ -7,6 +7,11 @@ console.log(routes);
 // Create the proxy
 var proxy = httpProxy.createProxyServer({});
 
+// Set the ip header
+proxy.on('proxyReq', function(proxyReq, req, res, options) {
+  proxyReq.setHeader('X-Proxy-Header', req.ip);
+});
+
 // Setup the proxy server and determine routing
 var server = http.createServer(function(req, res) {
   var rqstUrl = req.headers.host;
