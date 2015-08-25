@@ -9,7 +9,7 @@ var proxy = httpProxy.createProxyServer({});
 
 // Set the ip header
 proxy.on('proxyReq', function(proxyReq, req, res, options) {
-  proxyReq.setHeader('X-Proxy-Header', req.ip);
+  proxyReq.setHeader('X-Proxy-Header', req.connection.remoteAddress);
 });
 
 // Setup the proxy server and determine routing
@@ -35,7 +35,7 @@ proxy.on('error', function(err, req, res) {
 });
 
 // Determine the port number
-var port = 3000;
+var port = 80;
 
 // Start the Server
 server.listen(process.env.PORT || port, process.env.IP || '0.0.0.0', function() {
